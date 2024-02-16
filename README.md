@@ -1,0 +1,1 @@
+Codes in this repo are solely debugged and are not originally mine. The owner is https://github.com/alx-tools/0x00-Fix_My_Code_Challenge/blob/master/0-fizzbuzz.py
