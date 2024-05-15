@@ -13,6 +13,54 @@ class square():
         for key, value in kwargs.items():
             setattr(self, key, value)
 
+    @property
+    def width(self):
+        """Get the width of the rectangle."""
+        return self.__width
+
+    @width.setter
+    def width(self, value):
+        """
+        Set the width of the rectangle.
+
+        Args:
+            value (int): The width value to set.
+        Raises:
+            ValueError: If width is less than 0.
+            TypeError: If width is not an integer.
+        """
+        if isinstance(value, int):
+            if value < 0:
+                raise ValueError("width must be >= 0")
+            else:
+                self.__width = value
+        else:
+            raise TypeError("width must be an integer")
+
+    @property
+    def height(self):
+        """Get the height of the rectangle."""
+        return self.__height
+
+    @height.setter
+    def height(self, value):
+        """
+        Set the height of the rectangle.
+
+        Args:
+            value (int): The height value to set.
+        Raises:
+            ValueError: If height is less than 0.
+            TypeError: If height is not an integer.
+        """
+        if isinstance(value, int):
+            if value < 0:
+                raise ValueError("height must be >= 0")
+            else:
+                self.__height = value
+        else:
+            raise TypeError("height must be an integer")
+
     def area_of_my_square(self):
         """ Area of the square """
         return self.width * self.height
