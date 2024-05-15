@@ -5,9 +5,6 @@
 class Square():
     """defining a square"""
 
-    __width = 0
-    __height = 0
-
     def __init__(self, width=0, height=0):
         """Initializing class square"""
         self.__width = width
@@ -20,7 +17,7 @@ class Square():
 
     @width.setter
     def width(self, value):
-        """Set the width attriute"""
+        """Set the width attribute"""
         if isinstance(value, int):
             if value < 0:
                 raise ValueError("width must be >= 0")
