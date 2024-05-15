@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""A square"""
+
 
 class square():
 
@@ -6,6 +8,7 @@ class square():
     height = 0
 
     def __init__(self, *args, **kwargs):
+        """Initializing"""
         for key, value in kwargs.items():
             setattr(self, key, value)
 
