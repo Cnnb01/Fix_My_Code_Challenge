@@ -1,47 +1,35 @@
 #!/usr/bin/python3
-"""A square"""
+
+"""square
+Define a class Square
+"""
 
 
 class Square():
-    """defining a square"""
+    """Define a class Square"""
 
-    def __init__(self, width=0):
-        """Initializing class square"""
-        self.__width = width
-
-    @property
-    def width(self):
-        """Get the width of the rectangle."""
-        return self.__width
-
-    @width.setter
-    def width(self, value):
-        """Set the width attribute"""
-        if isinstance(value, int):
-            if value < 0:
-                raise ValueError("width must be >= 0")
-            else:
-                self.__width = value
-        else:
-            raise TypeError("width must be an integer")
+    def __init__(self, width=0, height=0):
+        """Initialize an instance of class"""
+        self.width = width
+        self.height = height
 
     def area_of_my_square(self):
         """ Area of the square """
-        return self.__width * self.__width
+        return self.width * self.width
 
-    def perimeter_of_my_square(self):
-        """Perimeter of the square"""
-        return (self.__width * 4)
+    def permiter_of_my_square(self):
+        """ Perimeter of square """
+        return (self.width * 2) + (self.width * 2)
 
     def __str__(self):
-        """String representation of the class square"""
-        return "{}/{}".format(self.__width, self.__width)
+        """ Description of square: string representation """
+        return "{}/{}".format(self.width, self.width)
 
 
 if __name__ == "__main__":
 
-    s = Square(width=12)
+    s = Square(width=12, height=9)
     print(s)
     print(s.area_of_my_square())
-    print(s.perimeter_of_my_square())
+    print(s.permiter_of_my_square())
 
